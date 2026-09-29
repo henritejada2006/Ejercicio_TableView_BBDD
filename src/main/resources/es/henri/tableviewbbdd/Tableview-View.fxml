@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="260.0" prefWidth="435.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="es.henri.tableviewbbdd.TableViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="33.0" prefWidth="395.0">
+         <children>
+            <Label fx:id="lb_nombre" text="Nombre: " />
+            <TextField fx:id="tx_nombre" />
+            <Button fx:id="bt_anadir" mnemonicParsing="false" onMouseClicked="#ClickAnadir" text="Añadir" />
+         </children>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="395.0">
+         <children>
+            <Label fx:id="lb_apellido" text="Apellido: " />
+            <TextField fx:id="tx_apellido" />
+         </children>
+      </HBox>
+      <HBox prefHeight="40.0" prefWidth="395.0">
+         <children>
+            <Label fx:id="lb_fecha_nac" text="Fecha de Nacimiento: " />
+            <DatePicker fx:id="dt_fecha_nac" />
+         </children>
+      </HBox>
+      <HBox prefHeight="32.0" prefWidth="395.0">
+         <children>
+            <Button fx:id="bt_reiniciar" mnemonicParsing="false" onMouseClicked="#ClickReiniciar" text="Reiniciar Columnas" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="bt_borrar" mnemonicParsing="false" onMouseClicked="#ClickBorrar" text="Borrar Columna Seleccionada" />
+         </children>
+      </HBox>
+      <TableView fx:id="tv_main" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tc_id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tc_nombre" prefWidth="117.0" text="Nombre" />
+            <TableColumn fx:id="tc_apellido" prefWidth="75.0" text="Apellido" />
+            <TableColumn fx:id="tc_fecha_nac" prefWidth="127.0" text="Fecha de Nacimiento" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
